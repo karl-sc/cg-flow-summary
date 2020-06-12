@@ -1,4 +1,4 @@
-CloudGenix WAN Capacity Graph
+CloudGenix Flow Summary Report
 ---------------------------------------
 This program displays summary statistics for flow data given a Site Name, Time Period, Application, and Source IP
 If either Application or Source IP are not given, we will implicitly assume all APP's or Source IP's and not 
