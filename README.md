@@ -1,9 +1,6 @@
-# cg-flow-summary
-Retrieve Flow summary statistics based on timeperiod, app, and src-ip
-
 CloudGenix WAN Capacity Graph
 ---------------------------------------
-This program displays summary statistics for flow data given a SiteName, TimePeriod, Application, and Source IP
+This program displays summary statistics for flow data given a Site Name, Time Period, Application, and Source IP
 If either Application or Source IP are not given, we will implicitly assume all APP's or Source IP's and not 
 filter flows based on it.
 ```
@@ -26,7 +23,8 @@ optional arguments:
   --days days, -d days  How many days back to look for flow summary data.
                         Default 0 (today)
 ```
-#EXAMPLES:
+
+# EXAMPLES:
     Show todays flows for the past 1 hour for all source-ip's and apps at chicago
         cg-flow-summary.py --authtokenfile ~/token-karl-demopod1.txt --site-name chicago
 
@@ -37,7 +35,7 @@ optional arguments:
     app Dropbox and the source HOST IP of 192.168.20.102.
         cg-flow-summary.py --authtokenfile ~/token-karl-demopod1.txt -s york -d 7 -p 24 -a dropbox -i 192.168.20.102/32
 
-#NOTES:
+# NOTES:
     The time Period parameter must take a numeric form with optional period designation E.G.:
         -p 1    1 Hour (Hours are implicit)
         -p 30s  30 Seconds
@@ -54,5 +52,3 @@ optional arguments:
 
     Source IP address filtering input should take the CIDR format  of x.x.x.x/y where x.x.x.x is an IPv4 address and y is a 
     CIDR prefix
-
-"""
